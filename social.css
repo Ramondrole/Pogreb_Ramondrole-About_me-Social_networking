@@ -1,0 +1,94 @@
+.social-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.social-wrapper h1 {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5rem;
+    color: var(--neon-blue, #00f3ff);
+    margin-bottom: 40px;
+    text-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+    text-align: center;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.social-card {
+    background: linear-gradient(135deg, rgba(0, 20, 40, 0.7), rgba(10, 10, 30, 0.8));
+    border: 1px solid var(--neon-blue, #00f3ff);
+    border-radius: 15px;
+    padding: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-pink, #ff00ff);
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
+}
+
+.social-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.social-info h3 {
+    color: var(--neon-pink, #ff00ff);
+    font-family: 'Orbitron', monospace;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.social-info p {
+    color: #a0a0ff;
+    font-size: 0.85rem;
+}
+
+.social-card.telegram .social-icon { color: #0088cc; }
+.social-card.vk .social-icon { color: #4c75a3; }
+.social-card.discord .social-icon { color: #5865f2; }
+.social-card.youtube .social-icon { color: #ff0000; }
+.social-card.community .social-icon { color: var(--neon-green, #00ff9d); }
+
+@media (max-width: 768px) {
+    .social-wrapper h1 {
+        font-size: 2rem;
+    }
+    
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-card {
+        padding: 15px;
+    }
+    
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-wrapper h1 {
+        font-size: 1.6rem;
+    }
+}
